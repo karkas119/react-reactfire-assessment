@@ -1,0 +1,28 @@
+.expense-card-wrapper {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.delete-expense-btn, .edit-expense-btn {
+    width: 100px;
+    height: 40px;
+    background-color: inherit;
+    border: 1px solid #FF5858;
+    color: #FF5858;
+    border-radius: 4px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.edit-expense-btn {
+    color: #168cdc;
+    border: 1px solid #168cdc;
+}
+
+.expense-card-text {
+    max-width: 200px;
+    overflow: auto;
+}

@@ -1,0 +1,24 @@
+.main-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.expense-cards-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+    flex-wrap: wrap;
+}
+
+.add-btn-wrapper {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: center;
+}
