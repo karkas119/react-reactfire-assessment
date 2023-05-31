@@ -17,15 +17,8 @@ export const useMainComponent = () => {
     const expensesQuery = query(expensesCollection);
     const {data: myExpenses} = useFirestoreCollectionData(expensesQuery);
 
-    const handleFormChange = (e) => {
-        setExpenseData(prevExpenseData => ({
-            ...prevExpenseData,
-            [e.target.name]: e.target.value,
-        }))
-    }
-
-    const handleExpenseFormChange = (e) => {
-        setExpenseForEdit(prevExpenseData => ({
+    const handleFormChange = (stateSetter) => (e) => {
+        stateSetter(prevExpenseData => ({
             ...prevExpenseData,
             [e.target.name]: e.target.value,
         }))
@@ -69,12 +62,13 @@ export const useMainComponent = () => {
         expenseFormMode,
         expenseForEdit,
         handleFormChange,
+        setExpenseData,
+        setExpenseForEdit,
         handleFormSubmit,
         handleDeleteExpenseBtn,
         setIsAddExpenseVisible,
         setExpenseFormMode,
         handleEditExpenseBtn,
-        handleExpenseFormChange,
         handleExpenseEditSubmit
     }
 }

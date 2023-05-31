@@ -12,20 +12,21 @@ export const MainComponent = () => {
         expenseForEdit,
         expenseFormMode,
         handleFormChange,
+        setExpenseData,
+        setExpenseForEdit,
         handleFormSubmit,
         handleDeleteExpenseBtn,
         setIsAddExpenseVisible,
         setExpenseFormMode,
         handleEditExpenseBtn,
-        handleExpenseFormChange,
         handleExpenseEditSubmit
     } = useMainComponent();
 
     const expenseFormMapping = {
-        edit: <ExpenseForm expenseData={expenseForEdit} handleFormChange={handleExpenseFormChange}
+        edit: <ExpenseForm expenseData={expenseForEdit} handleFormChange={handleFormChange(setExpenseForEdit)}
                            handleFormSubmit={handleExpenseEditSubmit}
                            setIsAddExpenseVisible={setIsAddExpenseVisible}/>,
-        add: <ExpenseForm expenseData={expenseData} handleFormChange={handleFormChange}
+        add: <ExpenseForm expenseData={expenseData} handleFormChange={handleFormChange(setExpenseData)}
                           handleFormSubmit={handleFormSubmit}
                           setIsAddExpenseVisible={setIsAddExpenseVisible}/>
     }
